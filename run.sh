@@ -24,7 +24,7 @@ services:
     container_name: custom-inference
     env_file: .env
     ports:
-      - "8001:8000"
+      - "8008:8008"
 
   custom-worker-$index:
     container_name: custom-worker-$index
