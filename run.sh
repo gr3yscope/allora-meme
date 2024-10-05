@@ -94,9 +94,9 @@ cat <<EOF > config.json
         "addressRestoreMnemonic": "$mnemonic_phrase",
         "alloraHomeDir": "",
         "gas": "1000000",
-        "gasAdjustment": 1.0,
+        "gasAdjustment": 1.2,
         "nodeRpc": "$rpc",
-        "maxRetries": 1,
+        "maxRetries": 2,
         "delay": 1,
         "submitTx": true
     },
@@ -104,90 +104,90 @@ cat <<EOF > config.json
         {
             "topicId": 1,
             "inferenceEntrypointName": "api-worker-reputer",
-            "loopSeconds": 1,
+            "loopSeconds": 60,
             "parameters": {
-                "InferenceEndpoint": "http://custom-inference:8000/inference/{Token}",
+                "InferenceEndpoint": "http://custom-inference:8008/inference/{Token}",
                 "Token": "ETH"
             }
         },
         {
             "topicId": 2,
             "inferenceEntrypointName": "api-worker-reputer",
-            "loopSeconds": 3,
+            "loopSeconds": 60,
             "parameters": {
-                "InferenceEndpoint": "http://custom-inference:8000/inference/{Token}",
+                "InferenceEndpoint": "http://custom-inference:8008/inference/{Token}",
                 "Token": "ETH"
             }
         },
         {
             "topicId": 3,
             "inferenceEntrypointName": "api-worker-reputer",
-            "loopSeconds": 5,
+            "loopSeconds": 60,
             "parameters": {
-                "InferenceEndpoint": "http://custom-inference:8000/inference/{Token}",
+                "InferenceEndpoint": "http://custom-inference:8008/inference/{Token}",
                 "Token": "BTC"
             }
         },
         {
             "topicId": 4,
             "inferenceEntrypointName": "api-worker-reputer",
-            "loopSeconds": 2,
+            "loopSeconds": 60,
             "parameters": {
-                "InferenceEndpoint": "http://custom-inference:8000/inference/{Token}",
+                "InferenceEndpoint": "http://custom-inference:8008/inference/{Token}",
                 "Token": "BTC"
             }
         },
         {
             "topicId": 5,
             "inferenceEntrypointName": "api-worker-reputer",
-            "loopSeconds": 4,
+            "loopSeconds": 60,
             "parameters": {
-                "InferenceEndpoint": "http://custom-inference:8000/inference/{Token}",
+                "InferenceEndpoint": "http://custom-inference:8008/inference/{Token}",
                 "Token": "SOL"
             }
         },
         {
             "topicId": 6,
             "inferenceEntrypointName": "api-worker-reputer",
-            "loopSeconds": 5,
+            "loopSeconds": 60,
             "parameters": {
-                "InferenceEndpoint": "http://custom-inference:8000/inference/{Token}",
+                "InferenceEndpoint": "http://custom-inference:8008/inference/{Token}",
                 "Token": "SOL"
             }
         },
         {
             "topicId": 7,
             "inferenceEntrypointName": "api-worker-reputer",
-            "loopSeconds": 2,
+            "loopSeconds": 60,
             "parameters": {
-                "InferenceEndpoint": "http://custom-inference:8000/inference/{Token}",
+                "InferenceEndpoint": "http://custom-inference:8008/inference/{Token}",
                 "Token": "ETH"
             }
         },
         {
             "topicId": 8,
             "inferenceEntrypointName": "api-worker-reputer",
-            "loopSeconds": 3,
+            "loopSeconds": 60,
             "parameters": {
-                "InferenceEndpoint": "http://custom-inference:8000/inference/{Token}",
+                "InferenceEndpoint": "http://custom-inference:8008/inference/{Token}",
                 "Token": "BNB"
             }
         },
         {
             "topicId": 9,
             "inferenceEntrypointName": "api-worker-reputer",
-            "loopSeconds": 5,
+            "loopSeconds": 60,
             "parameters": {
-                "InferenceEndpoint": "http://custom-inference:8000/inference/{Token}",
+                "InferenceEndpoint": "http://custom-inference:8008/inference/{Token}",
                 "Token": "ARB"
             }
         },
         {
             "topicId": 10,
             "inferenceEntrypointName": "api-worker-reputer",
-            "loopSeconds": 5,
+            "loopSeconds": 60,
             "parameters": {
-                "InferenceEndpoint": "http://custom-inference:8000/inference/{Token}",
+                "InferenceEndpoint": "http://custom-inference:8008/inference/{Token}",
                 "Token": "MEME"
             }
         }
