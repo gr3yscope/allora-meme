@@ -44,7 +44,7 @@ cat <<EOF > config.json
 {
     "wallet": {
         "addressKeyName": "test",
-        "addressRestoreMnemonic": "mnemonic_phrase",
+        "addressRestoreMnemonic": "$mnemonic_phrase",
         "alloraHomeDir": "",
         "gas": "1000000",
         "gasAdjustment": 1.2,
