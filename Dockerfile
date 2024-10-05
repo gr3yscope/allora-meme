@@ -26,7 +26,7 @@ COPY --from=builder /app/main /app/
 WORKDIR /app
 
 # Expose the port your application listens on
-EXPOSE 8000
+EXPOSE 8008
 
 # Command to run the application
 CMD ["./main"]
