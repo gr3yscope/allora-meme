@@ -21,7 +21,7 @@ services:
       dockerfile: Dockerfile
     command: python -u /app/app.py
     ports:
-      - "8008:8008"
+      - "8009:8008"
 
   hugging-worker:
     container_name: hugging-worker
@@ -59,7 +59,7 @@ cat <<EOF > config.json
             "inferenceEntrypointName": "api-worker-reputer",
             "loopSeconds": 60,
             "parameters": {
-                "InferenceEndpoint": "http://hugging-inference:8008/inference/{Token}",
+                "InferenceEndpoint": "http://hugging-inference:8009/inference/{Token}",
                 "Token": "ETH"
             }
         },
@@ -68,7 +68,7 @@ cat <<EOF > config.json
             "inferenceEntrypointName": "api-worker-reputer",
             "loopSeconds": 60,
             "parameters": {
-                "InferenceEndpoint": "http://hugging-inference:8008/inference/{Token}",
+                "InferenceEndpoint": "http://hugging-inference:8009/inference/{Token}",
                 "Token": "ETH"
             }
         },
@@ -77,7 +77,7 @@ cat <<EOF > config.json
             "inferenceEntrypointName": "api-worker-reputer",
             "loopSeconds": 60,
             "parameters": {
-                "InferenceEndpoint": "http://hugging-inference:8008/inference/{Token}",
+                "InferenceEndpoint": "http://hugging-inference:8009/inference/{Token}",
                 "Token": "BTC"
             }
         },
@@ -86,7 +86,7 @@ cat <<EOF > config.json
             "inferenceEntrypointName": "api-worker-reputer",
             "loopSeconds": 60,
             "parameters": {
-                "InferenceEndpoint": "http://hugging-inference:8008/inference/{Token}",
+                "InferenceEndpoint": "http://hugging-inference:8009/inference/{Token}",
                 "Token": "BTC"
             }
         },
@@ -95,7 +95,7 @@ cat <<EOF > config.json
             "inferenceEntrypointName": "api-worker-reputer",
             "loopSeconds": 60,
             "parameters": {
-                "InferenceEndpoint": "http://hugging-inference:8008/inference/{Token}",
+                "InferenceEndpoint": "http://hugging-inference:8009/inference/{Token}",
                 "Token": "SOL"
             }
         },
@@ -104,7 +104,7 @@ cat <<EOF > config.json
             "inferenceEntrypointName": "api-worker-reputer",
             "loopSeconds": 60,
             "parameters": {
-                "InferenceEndpoint": "http://hugging-inference:8008/inference/{Token}",
+                "InferenceEndpoint": "http://hugging-inference:8009/inference/{Token}",
                 "Token": "SOL"
             }
         },
@@ -113,7 +113,7 @@ cat <<EOF > config.json
             "inferenceEntrypointName": "api-worker-reputer",
             "loopSeconds": 60,
             "parameters": {
-                "InferenceEndpoint": "http://hugging-inference:8008/inference/{Token}",
+                "InferenceEndpoint": "http://hugging-inference:8009/inference/{Token}",
                 "Token": "ETH"
             }
         },
@@ -122,7 +122,7 @@ cat <<EOF > config.json
             "inferenceEntrypointName": "api-worker-reputer",
             "loopSeconds": 60,
             "parameters": {
-                "InferenceEndpoint": "http://hugging-inference:8008/inference/{Token}",
+                "InferenceEndpoint": "http://hugging-inference:8009/inference/{Token}",
                 "Token": "BNB"
             }
         },
@@ -131,7 +131,7 @@ cat <<EOF > config.json
             "inferenceEntrypointName": "api-worker-reputer",
             "loopSeconds": 60,
             "parameters": {
-                "InferenceEndpoint": "http://hugging-inference:8008/inference/{Token}",
+                "InferenceEndpoint": "http://hugging-inference:8009/inference/{Token}",
                 "Token": "ARB"
             }
         }
