@@ -21,7 +21,7 @@ services:
       dockerfile: Dockerfile
     command: python -u /app/app.py
     ports:
-      - "8002:8000"
+      - "8008:8008"
 
   hugging-worker:
     container_name: hugging-worker
@@ -44,94 +44,94 @@ cat <<EOF > config.json
 {
     "wallet": {
         "addressKeyName": "test",
-        "addressRestoreMnemonic": "$mnemonic_phrase",
+        "addressRestoreMnemonic": "mnemonic_phrase",
         "alloraHomeDir": "",
         "gas": "1000000",
-        "gasAdjustment": 1.0,
+        "gasAdjustment": 1.2,
         "nodeRpc": "https://allora-rpc.testnet-1.testnet.allora.network/",
-        "maxRetries": 1,
+        "maxRetries": 2,
         "delay": 1,
-        "submitTx": false
+        "submitTx": true
     },
     "worker": [
         {
             "topicId": 1,
             "inferenceEntrypointName": "api-worker-reputer",
-            "loopSeconds": 1,
+            "loopSeconds": 60,
             "parameters": {
-                "InferenceEndpoint": "http://hugging-inference:8000/inference/{Token}",
+                "InferenceEndpoint": "http://hugging-inference:8008/inference/{Token}",
                 "Token": "ETH"
             }
         },
         {
             "topicId": 2,
             "inferenceEntrypointName": "api-worker-reputer",
-            "loopSeconds": 3,
+            "loopSeconds": 60,
             "parameters": {
-                "InferenceEndpoint": "http://hugging-inference:8000/inference/{Token}",
+                "InferenceEndpoint": "http://hugging-inference:8008/inference/{Token}",
                 "Token": "ETH"
             }
         },
         {
             "topicId": 3,
             "inferenceEntrypointName": "api-worker-reputer",
-            "loopSeconds": 5,
+            "loopSeconds": 60,
             "parameters": {
-                "InferenceEndpoint": "http://hugging-inference:8000/inference/{Token}",
+                "InferenceEndpoint": "http://hugging-inference:8008/inference/{Token}",
                 "Token": "BTC"
             }
         },
         {
             "topicId": 4,
             "inferenceEntrypointName": "api-worker-reputer",
-            "loopSeconds": 2,
+            "loopSeconds": 60,
             "parameters": {
-                "InferenceEndpoint": "http://hugging-inference:8000/inference/{Token}",
+                "InferenceEndpoint": "http://hugging-inference:8008/inference/{Token}",
                 "Token": "BTC"
             }
         },
         {
             "topicId": 5,
             "inferenceEntrypointName": "api-worker-reputer",
-            "loopSeconds": 4,
+            "loopSeconds": 60,
             "parameters": {
-                "InferenceEndpoint": "http://hugging-inference:8000/inference/{Token}",
+                "InferenceEndpoint": "http://hugging-inference:8008/inference/{Token}",
                 "Token": "SOL"
             }
         },
         {
             "topicId": 6,
             "inferenceEntrypointName": "api-worker-reputer",
-            "loopSeconds": 5,
+            "loopSeconds": 60,
             "parameters": {
-                "InferenceEndpoint": "http://hugging-inference:8000/inference/{Token}",
+                "InferenceEndpoint": "http://hugging-inference:8008/inference/{Token}",
                 "Token": "SOL"
             }
         },
         {
             "topicId": 7,
             "inferenceEntrypointName": "api-worker-reputer",
-            "loopSeconds": 2,
+            "loopSeconds": 60,
             "parameters": {
-                "InferenceEndpoint": "http://hugging-inference:8000/inference/{Token}",
+                "InferenceEndpoint": "http://hugging-inference:8008/inference/{Token}",
                 "Token": "ETH"
             }
         },
         {
             "topicId": 8,
             "inferenceEntrypointName": "api-worker-reputer",
-            "loopSeconds": 3,
+            "loopSeconds": 60,
             "parameters": {
-                "InferenceEndpoint": "http://hugging-inference:8000/inference/{Token}",
+                "InferenceEndpoint": "http://hugging-inference:8008/inference/{Token}",
                 "Token": "BNB"
             }
         },
         {
             "topicId": 9,
             "inferenceEntrypointName": "api-worker-reputer",
-            "loopSeconds": 5,
+            "loopSeconds": 60,
             "parameters": {
-                "InferenceEndpoint": "http://hugging-inference:8000/inference/{Token}",
+                "InferenceEndpoint": "http://hugging-inference:8008/inference/{Token}",
                 "Token": "ARB"
             }
         }
